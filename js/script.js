@@ -167,22 +167,6 @@ function renderTable(currHref, data = addNewTask()) {
         }
     }
     switch (currHref) {
-        case "#main" || "":
-            data = JSON.parse(localStorage.getItem("data")) || [];
-            $mainTitle.innerHTML = "Текущие задачи";
-            $table.innerHTML = data.reduce((str, item) => {
-                str += `<tr>
-                                <td>${ item.taskName }</td>
-                                <td>${ item.taskDesc }</td>
-                                <td>${ getPriority( +item.priority ) }</td>
-                                <td><button class="btn-delete">Удалить</button>
-                                    <button class="btn-edit">Редактировать</button>
-                                    <button class="btn-finish">Выполнить</button>
-                                </td>
-                              </tr>`;
-                return str
-            }, '');
-            break;
         case "#done":
             dataFin = JSON.parse(localStorage.getItem("dataFin")) || [];
 
