@@ -1,0 +1,96 @@
+* {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .3);
+    cursor: pointer;
+}
+
+.modal.active{
+    display: block;
+}
+
+.popup {
+    position: absolute;
+    border: 1px solid rgba(0, 0, 0, .5);
+    width: 300px;
+    height: 250px;
+    background: #fff;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    cursor: default;
+    border-radius: 3px;
+}
+
+.popup-head {
+    position: relative;
+    height: 25px;
+}
+
+.popup-head .close {
+    position: absolute;
+    height: 20px;
+    padding: 0 2px;
+    right: 10px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.popup-head .close:hover {
+    border-color: #333;
+}
+
+.popup-main {
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.popup-form {
+    margin-bottom: 20px;
+}
+
+.popup-main label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.popup-main label span {
+    font: 12px sans-serif;
+    display: block;
+}
+
+.popup-main label input {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.popup-btn {
+    text-align: right;
+}
+
+.btn {
+    display: inline-block;
+    border: 1px solid #ccc;
+    padding: 5px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    border-color: #333;
+}

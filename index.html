@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Select</title>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__body">
+                <div class="logo">To<span>Do</span></div>
+                <nav class="menu">
+                    <ul class="menu__list">
+                        <li class="menu__item"><a href="#main" class="menu__link">Текущие задачи</a> </li>
+                        <li class="menu__item"><a href="#done" class="menu__link">Выполненные задачи</a> </li>
+                        <li class="menu__item"><a href="#deleted" class="menu__link">Удалённые задачи</a> </li>
+                    </ul>
+                </nav>
+            </div>
+         
+        </div>
+    </header>
+    <main class="main">
+        <div class="container">
+            <div class="main__body">
+                <div class="main__info">
+                  <div class="main__add">
+                        <p class="text">Добавьте новую задачу:</p>
+                        <button class="btn add-task">Добавить задачу</button>
+                        <button class="btn generate">Сгенерировать</button>
+                    </div>
+                <table>
+                        <caption class="main__title">Текущие задачи</caption>
+                        <thead>
+                          <tr>
+                            <th>Название задачи</th>
+                            <th>Описание задачи</th>
+                            <th>Приоритет</th>
+                          </tr>
+                        </thead>
+                        <tbody class="table"></tbody>
+                      </table>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__body">
+                <p class="footer__text-happy text">Be Happy!</p>
+                <p class="footer__text text">Made in Stepanyshki</p>
+            </div>
+        </div>
+    </footer>
+    <div class="modal">
+        <!-- В стилях display.none, удалите, чтобы увидеть -->
+        <div class="popap">
+            <div class="popap-head">
+                <div class="close">X</div>
+            </div>
+            <div class="popap-main">
+                <form class="popap-form">
+                    <label>
+                        <span>Название задачи</span>
+                        <input class="popup-field" type="text" name="taskName" >
+                    </label>
+                    <label>
+                        <span class="span text">Описание задачи</span>
+                        <textarea class="popup-field textarea" type="text"  rows="4" cols="10" name="taskDesc"></textarea>
+                    </label>
+                    <label>
+                        <span>Приоритет</span>
+                        <select  class="popup-field" type="text" name="priority">
+                            <option value="0">Триальное</option>
+                            <option value="1">Бессрочное</option>
+                            <option value="2">Срочное</option>
+                        </select>
+                    </label>
+                </form>
+                <div class="popap-btn">
+                    <div class="btn ok">Добавить</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </footer>
+    <div class="modal edit-version">
+       
+        <div class="popap">
+            <div class="popap-head">
+                <div class="close">X</div>
+            </div>
+            <div class="popap-main">
+                <form class="popap-form">
+                    <label>
+                        <span>Название задачи</span>
+                        <input class="popup-edit-field" type="text" name="taskName" >
+                    </label>
+                    <label>
+                        <span class="span text">Описание задачи</span>
+                        <textarea class="popup-edit-field textarea" type="text"  rows="4" cols="10" name="taskDesc"></textarea>
+                    </label>
+                    <label>
+                        <span>Приоритет</span>
+                        <select  class="popup-edit-field" type="text" name="priority">
+                            <option value="0">Триальное</option>
+                            <option value="1">Бессрочное</option>
+                            <option value="2">Срочное</option>
+                        </select>
+                    </label>
+                </form>
+                <div class="popap-btn">
+                    <div class="btn edit-ok">Редактировать</div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="js/script.js"></script>
+</body>
+</html>
+
+         <!-- <div class="main__inputs-block">
+                        <label for="inpt1">Первый</label>
+                            <input type="text" id="inpt1" class="input">
+                        <label for="inpt2">Первый</label>
+                            <input type="text" id="inpt2" class="input">
+                        <label for="inpt3">Первый</label>
+                            <input type="text" id="inpt3" class="input">
+                            <div class="btn add-user">add user</div>
+
+
+                    </div> -->
