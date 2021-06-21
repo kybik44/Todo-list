@@ -26,7 +26,7 @@ document.addEventListener("click", function (event) {
         currTaget = target;
     };
     if(target.classList.contains("edit")){
-        editTask(currTaget.closest("tr"), addNewTask());
+        editTask(currTaget.closest("tr"), JSON.parse(localStorage.getItem("mainData")));
     }
     if (target.classList.contains("menu__link")) renderTable(target.getAttribute('href'));
 
@@ -37,7 +37,7 @@ function toggleClass(evt, versModal, index) {
     if (evt === "open") versModal.classList.add("active");
     if (evt === "close") {
         versModal.classList.remove("active");
-        validate().clearForm();
+        // validate().clearForm();
     }
 }
 
@@ -84,15 +84,16 @@ function editTask(targetTr, mainData){
     console.log(targetTr);
     for(let key in mainData){
         if (targetTr.dataset.id === key) {
-            console.log(mainData[key])
             mainData[key] = [...$fields].reduce((obj, item) => {
                 console.log(item.value)
                 obj[item.name] = item.value;
                 return obj;
             }, {}); 
+            
         }
     };
-    // localStorage.setItem("mainData", JSON.stringify(mainData));
+    localStorage.setItem("mainData", JSON.stringify(mainData));
+    renderTable("#main");
 }
 
 function renderTable(href) {
